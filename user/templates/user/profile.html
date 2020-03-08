@@ -1,0 +1,20 @@
+{% extends 'user/base.html' %}
+
+{% block content %}
+
+<h1 class="text-center text-info my-5">Profile Page</h1>
+
+<div class="container">
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{message}}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {%endfor%}
+    {% endif %}
+</div>
+
+{% endblock %}
